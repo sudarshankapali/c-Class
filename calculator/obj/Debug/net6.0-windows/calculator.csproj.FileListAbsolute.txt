@@ -1,0 +1,17 @@
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.Form1.resources
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.csproj.GenerateResource.cache
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.AssemblyInfoInputs.cache
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.AssemblyInfo.cs
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.csproj.CoreCompileInputs.cache
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\calculator.exe
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\calculator.deps.json
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\calculator.runtimeconfig.json
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\calculator.dll
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\ref\calculator.dll
+D:\Sudarshan\calculator\bin\Debug\net6.0-windows\calculator.pdb
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.dll
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\ref\calculator.dll
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.pdb
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.genruntimeconfig.cache
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.csproj.AssemblyReference.cache
