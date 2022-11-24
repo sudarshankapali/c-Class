@@ -2,7 +2,9 @@ namespace calculator
 {
     public partial class Form1 : Form
     {
-        public int displayValue = Convert.ToInt32(display.Text);
+        string operate = "";
+        decimal result = 0;
+        
         
         public Form1()
         {
@@ -58,10 +60,19 @@ namespace calculator
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string data = display.Text;
+            if(display.Text == "+" || display.Text == "*" || display.Text == "/")
+            {
+                display.Text = "1";
 
-            data = data + "1";
-            display.Text = data;
+            }
+            else
+            {
+                string data = display.Text;
+
+                data = data + "1";
+                display.Text = data;
+            }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -94,40 +105,72 @@ namespace calculator
 
         private void button13_Click(object sender, EventArgs e)
         {
-            string data = display.Text;
-            data = data + "+";
-            display.Text = data;
+            GetResultValue();
+            operate = "+";
+            display.Text = "+";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string data = display.Text;
-            data = data + "/";
-            display.Text = data;
+            GetResultValue();
+            
+            display.Text = "/";
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            string data = display.Text;
-            data = data + "*";
-            display.Text = data;
+            GetResultValue();
+            display.Text = "*";
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            string data = display.Text;
-            data = data + "-";
-            display.Text = data;
+            GetResultValue();
+           
+            display.Text = "-";
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            decimal firstNumber = result;
+            decimal secondNumber = Convert.ToDecimal(display.Text);
+            switch (operate)
+            {
+                case "+":
+                    {
+                        result = firstNumber + secondNumber;
+                        display.Text = result.ToString();
+                    }
+                    break;
+                    case "-":
+                    {
+                        result = firstNumber - secondNumber;
+                        display.Text = result.ToString();
+                    }
+                    break;
+                case "*":
+                    {
+                        result = firstNumber * secondNumber;
+                        display.Text= result.ToString();
+                    }
+                    break;
+                case "/":
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
             display.Clear();
+        }
+        public void GetResultValue()
+        {
+            if (display.Text != "" && display.Text != "+" && display.Text != "-" && display.Text != "*" && display.Text !="/")
+            {
+                result = Convert.ToDecimal(display.Text);
+            }
         }
     }
 }
