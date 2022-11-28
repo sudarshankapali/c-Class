@@ -47,6 +47,11 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.yes = new System.Windows.Forms.RadioButton();
+            this.no = new System.Windows.Forms.RadioButton();
+            this.termsAndCondition = new System.Windows.Forms.CheckBox();
+            this.button19 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // display
@@ -238,11 +243,72 @@
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "hello ",
+            "world"});
+            this.comboBox1.Location = new System.Drawing.Point(259, 373);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(250, 23);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // yes
+            // 
+            this.yes.AccessibleName = "";
+            this.yes.AutoSize = true;
+            this.yes.Location = new System.Drawing.Point(259, 409);
+            this.yes.Name = "yes";
+            this.yes.Size = new System.Drawing.Size(66, 19);
+            this.yes.TabIndex = 20;
+            this.yes.TabStop = true;
+            this.yes.Text = "activate";
+            this.yes.UseVisualStyleBackColor = true;
+            this.yes.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // no
+            // 
+            this.no.AutoSize = true;
+            this.no.Location = new System.Drawing.Point(415, 409);
+            this.no.Name = "no";
+            this.no.Size = new System.Drawing.Size(94, 19);
+            this.no.TabIndex = 21;
+            this.no.TabStop = true;
+            this.no.Text = "radioButton2";
+            this.no.UseVisualStyleBackColor = true;
+            // 
+            // termsAndCondition
+            // 
+            this.termsAndCondition.AutoSize = true;
+            this.termsAndCondition.Location = new System.Drawing.Point(328, 434);
+            this.termsAndCondition.Name = "termsAndCondition";
+            this.termsAndCondition.Size = new System.Drawing.Size(83, 19);
+            this.termsAndCondition.TabIndex = 22;
+            this.termsAndCondition.Text = "checkBox1";
+            this.termsAndCondition.UseVisualStyleBackColor = true;
+            this.termsAndCondition.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(590, 265);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.TabIndex = 23;
+            this.button19.Text = "query";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 450);
+            this.Controls.Add(this.button19);
+            this.Controls.Add(this.termsAndCondition);
+            this.Controls.Add(this.no);
+            this.Controls.Add(this.yes);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
@@ -290,5 +356,11 @@
         private Button button16;
         private Button button17;
         private Button button18;
+        private ComboBox comboBox1;
+        private RadioButton yes;
+        private RadioButton no;
+        private CheckBox checkBox1;
+        private CheckBox termsAndCondition;
+        private Button button19;
     }
 }

@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace calculator
 {
     public partial class Form1 : Form
@@ -5,7 +7,12 @@ namespace calculator
         string operate = "";
         decimal result = 0;
         
-        
+        SqlConnection connec = new SqlConnection(
+            @"Data Source=.\SQLEXPRESS;
+            initial catalog=bit3sem;
+            user id=sa;
+            password=kist@123;"
+            );
         public Form1()
         {
             InitializeComponent();
@@ -179,6 +186,7 @@ namespace calculator
 
         private void button10_Click(object sender, EventArgs e)
         {
+            
             string data = display.Text;
             data = data + ".";
             display.Text = data;
@@ -271,6 +279,33 @@ namespace calculator
             this.Hide();
             newForm.ShowDialog();
             
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+           // try
+            //{
+                connec.Open();
+                string query = "insert into student(name,address,contact,college) values ('justinMaharjan','bhaktapur','9813919623','kist college')";
+                SqlCommand cmd = new SqlCommand(query, connec);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("saved sucessfully");
+                connec.Close();
+            //}
+           /* catch (Exception ex)
+            {
+                MessageBox.Show("error: ", ex.InnerException);
+            }*/
         }
     }
 }
