@@ -52,6 +52,9 @@
             this.no = new System.Windows.Forms.RadioButton();
             this.termsAndCondition = new System.Windows.Forms.CheckBox();
             this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // display
@@ -291,19 +294,52 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(590, 265);
+            this.button19.Location = new System.Drawing.Point(553, 56);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.Size = new System.Drawing.Size(97, 23);
             this.button19.TabIndex = 23;
-            this.button19.Text = "query";
+            this.button19.Text = "insert_query";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(553, 90);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(97, 23);
+            this.button20.TabIndex = 24;
+            this.button20.Text = "update_query";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(553, 125);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(97, 23);
+            this.button21.TabIndex = 25;
+            this.button21.Text = "delete_query";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(553, 160);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(97, 23);
+            this.button22.TabIndex = 26;
+            this.button22.Text = "select_query";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 450);
+            this.ClientSize = new System.Drawing.Size(889, 450);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.termsAndCondition);
             this.Controls.Add(this.no);
@@ -362,5 +398,8 @@
         private CheckBox checkBox1;
         private CheckBox termsAndCondition;
         private Button button19;
+        private Button button20;
+        private Button button21;
+        private Button button22;
     }
 }

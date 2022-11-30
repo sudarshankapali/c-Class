@@ -293,19 +293,49 @@ namespace calculator
 
         private void button19_Click(object sender, EventArgs e)
         {
-           // try
-            //{
+            try
+            {
                 connec.Open();
                 string query = "insert into student(name,address,contact,college) values ('justinMaharjan','bhaktapur','9813919623','kist college')";
                 SqlCommand cmd = new SqlCommand(query, connec);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("saved sucessfully");
                 connec.Close();
-            //}
-           /* catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("error: ", ex.InnerException);
-            }*/
+                MessageBox.Show("error: "+ ex.Message);
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            connec.Open();
+            string query = "update student set name='bye' where id =2";
+            SqlCommand cmd = new SqlCommand(query, connec);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("query updated sucessfully");
+            connec.Close();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            connec.Open();
+            string query = "delete from student where id = 4";
+            SqlCommand cmd = new SqlCommand(query, connec);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("query deleted sucessfully");
+            connec.Close();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            connec.Open();
+            string query = "select * from student where id>=2";
+            SqlCommand cmd = new SqlCommand(query, connec);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("selected saved sucessfully");
+            connec.Close();
         }
     }
 }

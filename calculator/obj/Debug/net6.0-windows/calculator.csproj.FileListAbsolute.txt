@@ -24,3 +24,5 @@ D:\Sudarshan\calculator\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 D:\Sudarshan\calculator\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Sudarshan\calculator\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.csproj.CopyComplete
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.query.resources
+D:\Sudarshan\calculator\obj\Debug\net6.0-windows\calculator.Form2.resources
