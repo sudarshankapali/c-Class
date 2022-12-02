@@ -19,7 +19,6 @@ namespace calculator
             user id=sa;
             password=kist@123;"
             );
-        private object sqlcommand;
 
         public Form2()
         {
@@ -39,7 +38,16 @@ namespace calculator
             SqlDataAdapter sda = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+           // dataGridView1.DataSource = dt;
+            int  sn =1;
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                string std_name = dt.Rows[i]["id"].ToString();
+                string std_address = dt.Rows[i]["name"].ToString();  
+                string std_contact = dt.Rows[i]["address"].ToString();
+                string std_college = dt.Rows[i]["salary"].ToString();
+                dataGridView2.Rows.Add(sn++,std_name,std_address,std_contact,std_college);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,7 +57,14 @@ namespace calculator
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            conn.Open();
+            int id = Int32.Parse(textBox1.Text);
+            int salary = Int32.Parse(textBox4.Text);
+            string query = " update employee set name= '"+textBox2.Text+"', address= '"+textBox3.Text+"',salary ='"+textBox4.Text+"' where id = "+id+"";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Data updated sucessfully");
+            conn.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,6 +82,23 @@ namespace calculator
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data inserted sucessfully");
             conn.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(textBox1.Text);
+            conn.Open();
+            string query = " delete from employee where id = "+id+"";
+            SqlCommand cmd = new SqlCommand(query,conn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Data deleted sucessfully");
+            MessageBox.Show("Data deleted sucessfully");
+            conn.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
