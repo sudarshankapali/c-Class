@@ -9,8 +9,8 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string data = userName.Text+"sample";
-            string data1 = password.Text;
+            string data = userName.Text;
+            string data1 = password.Text+"sample";
          /*   try
             {
                 int age_input = Convert.ToInt32(age.Text);
